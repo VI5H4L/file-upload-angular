@@ -1,0 +1,11 @@
+<div class="upload-container">
+  <h3>Upload File (Multipart)</h3>
+  <input type="file" (change)="onFileSelected($event)" />
+  <button (click)="uploadFile()" [disabled]="!selectedFile">Upload</button>
+</div>
+
+<div class="upload-container">
+  <h3>Upload .zip as Base64 JSON</h3>
+  <input type="file" accept=".zip" (change)="onZipFileSelected($event)" />
+  <button (click)="uploadZipFile()" [disabled]="!selectedZipFile">Upload as Base64</button>
+</div>
